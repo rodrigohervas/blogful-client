@@ -13,7 +13,7 @@ function App() {
   const history = useHistory()
 
   useEffect( () => {
-    const url = process.env.REACT_APP_URL
+    const url = process.env.REACT_APP_URL + '556'
     const options = {
       headers: {
         'Content-Type': 'application/json', 
@@ -30,7 +30,11 @@ function App() {
         return response.json()
       })
       .then(articles => {
-        setArticles(articles)
+        console.log('ARTICLES: ', articles)
+        if(Array.isArray(articles)){ 
+          setArticles(articles)
+        }
+        console.log('ARTICLES: ', articles)
       })
       .catch(error => console.log('Error:', error))
 
@@ -74,9 +78,7 @@ function App() {
 
           <Route path='/update/:id'>
             <UpdateForm 
-              article={
-                articles.filter(article => article.id === history.location.articleId)[0]
-              } 
+              article={ articles.filter(article => article.id === history.location.articleId)[0] } 
               articleId={history.location.articleId} 
               onChange={handleArticles} />
           </Route>
