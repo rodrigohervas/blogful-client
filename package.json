@@ -18,8 +18,7 @@
     "prebuild": "set CI=true react-scripts test --colors",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "now --prod ./build", 
-    "postdeploy": "now alias -A ./build/now.json"
+    "deploy": "now --prod ./build"
   },
   "eslintConfig": {
     "extends": "react-app"
