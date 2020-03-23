@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
+import config from './config'
 
 
 function UpdateForm(props) {
@@ -38,11 +39,11 @@ function UpdateForm(props) {
             date_published: props.article.date_published
         }
 
-        const url = process.env.REACT_APP_URL + newArticle.id
+        const url = config.REACT_APP_URL + newArticle.id
         const options = {
             headers: {
                 'Content-Type': 'application/json', 
-                'Authorization': `${process.env.REACT_APP_API_KEY}`,
+                'Authorization': `${config.REACT_APP_API_KEY}`,
             }, 
             method: 'PATCH', 
             body: JSON.stringify(newArticle)

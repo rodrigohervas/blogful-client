@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "alias": "blogfulrh", 
+    "name": "blogful-app",
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/.*", "dest": "/index.html" }
+    ]
+  }
+  

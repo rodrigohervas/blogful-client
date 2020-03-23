@@ -4,7 +4,9 @@ import BlogfulContext from './BlogfulContext'
 import { Route, useHistory } from 'react-router-dom'
 import UpdateForm from './UpdateForm'
 import ArticlesList from './ArticlesList'
+import config from './config'
 require('dotenv').config()
+
 
 function App() {
 
@@ -13,11 +15,11 @@ function App() {
   const history = useHistory()
 
   useEffect( () => {
-    const url = process.env.REACT_APP_URL + '556'
+    const url = config.REACT_APP_URL
     const options = {
       headers: {
         'Content-Type': 'application/json', 
-        'Authorization': `${process.env.REACT_APP_API_KEY}`,
+        'Authorization': `${config.REACT_APP_API_KEY}`,
       }, 
       'Method': 'GET'
     }
