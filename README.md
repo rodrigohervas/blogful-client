@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Blogful React client
 
-## Available Scripts
+React client to fetch CRUD operations from blogful-server repo
 
-In the project directory, you can run:
+Technologies used: HTML, CSS, Javascript, React, React-Router, Fetch API
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Set up
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Complete the following steps to start a new project (NEW-PROJECT-NAME):
 
-### `npm test`
+1. Clone this repository to your local machine `git clone https://github.com/rodrigohervas/blogful-client NEW-PROJECT-NAME`
+2. `cd` into the cloned repository
+3. Make a fresh start of the git history for this project with `rm -r Force .git` and `git init`
+4. Make sure that the .gitignore file is encoded as 'UTF-8'
+5. Install the node dependencies `npm install`
+6. Add an `.env` file with the following content:
+    1. REACT_APP_API_ENDPOINT='https://blogfulrh.herokuapp.com/api/articles/' [or a localhost endpoint if using repo blogful-server]
+    2. REACT_APP_API_KEY=[your_api_key_here]
+    * Note: The endpoint url and api key depends on what you generate in: https://github.com/rodrigohervas/blogful-server
+7. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "blogful-client",`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Related repos:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://github.com/rodrigohervas/blogful-server
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Scripts
 
-### `npm run eject`
+Start the application `npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Live Site
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+https://blogfulrh.now.sh/
